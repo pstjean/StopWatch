@@ -1,3 +1,8 @@
 $(document).ready(function() {
-    alert('Hello World!');
+    $("#startWatch").click(function() {
+      alert('Started');
+    });
+    $("#stopWatch").click(function() {
+      alert('Stopped');
+    });
 });

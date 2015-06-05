@@ -1,4 +1,5 @@
 var currentTime = 0;
+var tickyClock;
 
 function updateWatch() {
   $("#watchFace").html(currentTime/1000);
@@ -6,11 +7,10 @@ function updateWatch() {
 }
 
 $(document).ready(function() {
-    $("#startWatch").click(function() {
-      var tickyClock = window.setInterval(updateWatch, 100);
-      alert('Started');
-    });
-    $("#stopWatch").click(function() {
-      alert('Stopped');
-    });
+  $("#startWatch").click(function() {
+    tickyClock = window.setInterval(updateWatch, 100);
+  });
+  $("#stopWatch").click(function() {
+    clearInterval(tickyClock);
+  });
 });

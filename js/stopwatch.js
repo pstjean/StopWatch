@@ -13,4 +13,8 @@ $(document).ready(function() {
   $("#stopWatch").click(function() {
     clearInterval(tickyClock);
   });
+  $("#clearWatch").click(function() {
+    currentTime = 0;
+    $("#watchFace").html(currentTime);
+  });
 });
